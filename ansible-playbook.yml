@@ -1,0 +1,16 @@
+---
+
+# siempre empezamos con una lista. El primer ítem de la lista es un diccionario
+- name: mi primer playbook
+  hosts: fhw
+  remote_user: root
+  # Dentro del diccionario del 1er play tenemos la lista de tareas a ejecutar
+  tasks:
+  # Los nombres nos permiten ver durante la ejecución qué se está ejecutando.
+  - name: Asegurarse que apache está en la última versión
+    # El nombre del módulo a utilizar
+    apt: name=apache2 state=present
+  - name: Asegurarse que apache está ejecutándose
+    service: name=apache2 state=started
+
+...
