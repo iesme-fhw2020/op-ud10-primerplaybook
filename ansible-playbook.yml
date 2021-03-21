@@ -3,7 +3,7 @@
 # siempre empezamos con una lista. El primer ítem de la lista es un diccionario
 - name: mi primer playbook
   hosts: fhw
-  remote_user: root
+  become: yes
   # Dentro del diccionario del 1er play tenemos la lista de tareas a ejecutar
   tasks:
   # Los nombres nos permiten ver durante la ejecución qué se está ejecutando.
